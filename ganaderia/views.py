@@ -14,7 +14,9 @@ def registrarse(request):
             form.save()
             username = form.cleaned_data['username']
             return redirect('index')
+        else:
+            print("Formulario no valido")
     else:
         form = UserRegisterForm()
-    context = {'form': form }
-    return render(request,'registro.html', context)
+    context = {'form': form}
+    return render(request,'pages-sign-up.html', context)

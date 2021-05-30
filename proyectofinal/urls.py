@@ -18,9 +18,12 @@ from django.urls import path
 from ganaderia.views import inicio,registrarse
 from django.contrib.auth.views import LoginView,LogoutView
 urlpatterns = [
-    path('', inicio, name= 'index'),
+    path('', inicio, name='index'),
     path('admin/', admin.site.urls),
-    path('registrarse/', registrarse,name='registro'),
-    path('login/',LoginView.as_view(template_name='login.html'),name='login'),
-    path('logout/',LogoutView.as_view(template_name='logout.html'),name='logout')
+    path('registrarse/', registrarse, name='registro'),
+    path('login/', LoginView.as_view(template_name='pages-login.html'), name='login'),
+    path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
+    path('productos/', LoginView.as_view(template_name='portfolio-2-column.html'), name='productos'),
+    path('contact/', LoginView.as_view(template_name='contact.html'), name='contact'),
+    path('nosotros/', LoginView.as_view(template_name='pages-about-us.html'), name='nosotros')
 ]
