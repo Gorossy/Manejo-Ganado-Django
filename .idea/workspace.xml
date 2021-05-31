@@ -20,71 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0beed8d9-32d7-414d-ada9-44575ee3b4e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/animales.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/toros.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/vacas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ganaderia/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ganaderia/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proyectofinal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyectofinal/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proyectofinal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyectofinal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/nexus.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/nexus.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/frontpage/image9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/portfolio/image9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/sample_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/img/sample_bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/slideshow/slide1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/img/slideshow/slide1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/slideshow/slide2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/slideshow/slide3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/slideshow/slide4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blank-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-accordions-tabs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-animate-on-scroll.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-carousels.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-grid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-icons-font-awesome.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-icons-glyphicons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-icons-social.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-icons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-progress-bars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-testimonials.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-typo-basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/features-typo-blockquotes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/animales.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/animales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-about-me.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages-about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-faq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-full-width.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-left-sidebar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages-login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-right-sidebar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages-sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio-2-column.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio-2-column.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio-3-column.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio-4-column.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio-6-column.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_alimentacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_alimentacion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_animales.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_animales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_baja.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_baja.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_cliente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_cliente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_enfermedades.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_enfermedades.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_evolucion.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_evolucion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_pajilla.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_pajilla.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_ternero.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_ternero.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_vacamadre.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_vacamadre.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_vacuna.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_vacuna.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_venta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_venta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mostrar_veterinario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mostrar_veterinario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +76,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/css" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Base de Datos\Proyectofinal\static\assets\css" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Proyectofinal" type="Python.DjangoServer" factoryName="Django server">
@@ -127,6 +91,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="proyectofinal.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -161,6 +126,8 @@
       <workItem from="1622306127766" duration="22670000" />
       <workItem from="1622340354392" duration="6683000" />
       <workItem from="1622390904010" duration="4698000" />
+      <workItem from="1622412929851" duration="2111000" />
+      <workItem from="1622468516575" duration="26547000" />
     </task>
     <servers />
   </component>
@@ -193,6 +160,26 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1622349531511" />
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1622486363164">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768/1366.0.1097.617@0.0.1366.768" timestamp="1622486363164" />
+    <state width="1323" height="342" key="GridCell.Tab.0.bottom" timestamp="1622484889673">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="342" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1097.617@0.0.1366.768" timestamp="1622484889673" />
+    <state width="1323" height="342" key="GridCell.Tab.0.center" timestamp="1622484889673">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="342" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1097.617@0.0.1366.768" timestamp="1622484889673" />
+    <state width="1323" height="342" key="GridCell.Tab.0.left" timestamp="1622484889672">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="342" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1097.617@0.0.1366.768" timestamp="1622484889672" />
+    <state width="1323" height="342" key="GridCell.Tab.0.right" timestamp="1622484889673">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="342" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1097.617@0.0.1366.768" timestamp="1622484889673" />
     <state x="180" y="0" width="914" height="617" key="SettingsEditor" timestamp="1622307625482">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -204,5 +191,9 @@
     </state>
     <state x="1908" y="0" width="561" height="623" key="dock-window-1/0.0.1366.768/1366.0.1097.617@0.0.1366.768" timestamp="1622217994032" />
     <state x="58" y="-18" width="1272" height="556" maximized="true" key="dock-window-1/0.0.1366.768@0.0.1366.768" timestamp="1622237912447" />
+    <state x="475" y="242" key="scopes" timestamp="1622498616955">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="475" y="242" key="scopes/0.0.1366.768@0.0.1366.768" timestamp="1622498616955" />
   </component>
 </project>

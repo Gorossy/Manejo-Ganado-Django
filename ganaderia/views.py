@@ -6,7 +6,12 @@ from .models import *
 
 # Create your views here.
 def inicio(request):
-    return render(request,'index.html')
+    if request.user.is_authenticated:
+        return render(request, 'menu.html')
+    else:
+        return render(request, 'index.html')
+
+
 
 
 def registrarse(request):

@@ -5544,6 +5544,7 @@ button.close {
   height: 12px;
   background-color: #ffffff;
 }
+
 .carousel-caption {
   position: absolute;
   left: 15%;
@@ -5772,3 +5773,4 @@ button.close {
     display: none !important;
   }
 }
+

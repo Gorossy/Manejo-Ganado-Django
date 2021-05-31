@@ -49,33 +49,94 @@
                     <div class="col-md-12 no-padding">
                         <div class="text-center visible-lg">
                             <ul id="hornavmenu" class="nav navbar-nav">
-                                <li>
-                                    <a href='{% url "index" %}' title=" " class="fa-home">Home</a>
-                                </li>
-
-                                <li>
-                                    <a href='{% url "nosotros" %}' class="fa-copy">Sobre nosotros</a>
-
-                                </li>
-
-                                <li>
-                                    <a href='{% url "productos" %}' class="fa-th">Productos</a>
-                                </li>
                                 {% if user.is_authenticated %}
-                                <li>
-                                    <a href='{% url "registro" %}' class="fa-font">Registrarse</a>
-                                </li>
-                                <li>
-                                    <a href='{% url "logout" %}' class="fa-font">logout</a>
-                                </li>
+                                    <li>
+                                        <a href='{% url "registro" %}' class="fa-font">Registrar Administrador</a>
+                                    </li>
+                                    <li>
+                                        <a href='{% url "logout" %}' class="fa-font">Logout</a>
+                                    </li>
+
+                                    <li class="parent">
+                                        <span>Registros</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="">Agregar animales</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Registrar Ventas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Registrar Pajillas</a>
+                                                </li>
+                                                <li class="parent">
+                                                    <span>Vacas Madres</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="">Registrar Inseminaciones</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Registrar Embarazos</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Registrar Partos</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">Registro Alimentacion</a>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Estado Actual</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="">Ver ventas</a> <!-- mostrar las pajillas disponibles -->
+                                                </li>
+                                                <li>
+                                                    <a href="">Toros</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Vacas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Vacas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Historial Enfermedades</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Historial de vacunas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Historial de bajas</a>
+                                                </li>
+
+                                            </ul>
+                                    </li>
+
                                 {% else %}
-                                <li>
-                                    <a href='{% url "login" %}' class="fa-font">Login</a>
-                                </li>
+                                    <li>
+                                        <a href='{% url "index" %}' title=" " class="fa-home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href='{% url "productos" %}' class="fa-th">Productos</a>
+                                    </li>
+
+                                    <li>
+                                        <a href='{% url "nosotros" %}' class="fa-copy">Sobre Nosotros</a>
+                                    </li>
+
+                                    <li>
+                                        <a href='{% url "contact" %}' class="fa-comment">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href='{% url "login" %}' class="fa-font">Login</a>
+                                    </li>
                                 {% endif %}
-                                <li>
-                                    <a href='{% url "contact" %}' class="fa-comment">Contact</a>
-                                </li>
+
                             </ul>
                         </div>
                     </div>

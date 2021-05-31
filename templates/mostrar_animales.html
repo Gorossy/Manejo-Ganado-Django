@@ -1,26 +1,27 @@
 {% extends 'base2.html' %}
+
 {% block formulario %}
+
 </form>
-  <form class="vistatabla">
-    <table>
+  <form >
+    <table class="table">
       <thead>
         <tr>
           <th>ID</th>
-          <th>Tipo</th>
-          <th>Peso</th>
-          <th>Acciones</th>
+          <th>TIPO</th>
+          <th>PESO</th>
+          <th>OPCIONES</th>
+
         </tr>
       </thead>
       <tbody>
         {% for ani in formulario %}
         <tr>
-          <td>{{ani.id}}</td>
-          <td>{{ani.tipo}}</td>
-          <td>{{ani.peso}}</td>
-          <td><a href="{%url 'editarAnimal' ani.id %}">Editar</a> <a href="{%url 'eliminarAnimal' ani.id %}">
-              Eliminar</a> {% if ani.tipo == 2 %}
-              <a href="{%url 'index' %}">VacaMadre</a>
-              {% endif %}</td>
+            <td>{{ani.id}}</td>
+            <td>{% if ani.tipo == 0%} Vaca {% endif %} {% if ani.tipo == 1%} Toro {% endif %} {% if ani.tipo == 2%} Cebo {% endif %} {% if ani.tipo == 3%} Ternero {% endif %} </td>
+            <td>{{ani.peso}}</td>
+            <td><a href="{%url 'editarAnimal' ani.id %}">Editar</a> <a href="{%url 'eliminarAnimal' ani.id %}">
+              Eliminar</a></td>
         </tr>
         {% endfor %}
       </tbody>
