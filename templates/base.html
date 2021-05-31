@@ -36,7 +36,7 @@
         <div id="body-bg">
             <div id="header">
                 <div class="container">
-                    <a href=" " title="">
+                    <a href="{% url "index" %}" title="">
                         <img src="{% static 'assets/img/logo.png'%}" alt="Logo" />
                     </a>
                 </div>
@@ -61,15 +61,18 @@
                                 <li>
                                     <a href='{% url "productos" %}' class="fa-th">Productos</a>
                                 </li>
-                                <li>
-                                    <a href='{% url "login" %}' class="fa-font">Login</a>
-                                </li>
+                                {% if user.is_authenticated %}
                                 <li>
                                     <a href='{% url "registro" %}' class="fa-font">Registrarse</a>
                                 </li>
                                 <li>
                                     <a href='{% url "logout" %}' class="fa-font">logout</a>
                                 </li>
+                                {% else %}
+                                <li>
+                                    <a href='{% url "login" %}' class="fa-font">Login</a>
+                                </li>
+                                {% endif %}
                                 <li>
                                     <a href='{% url "contact" %}' class="fa-comment">Contact</a>
                                 </li>
@@ -175,7 +178,7 @@
             </div>
             <!-- End Footer Menu -->
             <!-- JS -->
-            <script type="text/javascript" src="{% static 'assets/js/jquery.min.js%'%}" type="text/javascript"></script>
+            <script type="text/javascript" src="{% static 'assets/js/jquery.min.js'%}" type="text/javascript"></script>
             <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}" type="text/javascript"></script>
             <script type="text/javascript" src="{% static 'assets/js/scripts.js'%}"></script>
             <!-- Isotope - Portfolio Sorting -->

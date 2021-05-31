@@ -1,0 +1,27 @@
+{% extends 'base2.html' %}
+{% block formulario %}
+</form>
+  <form class="vistatabla">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Telefono</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ani in formulario %}
+        <tr>
+          <td>{{ani.id}}</td>
+          <td>{{ani.nombre}}</td>
+          <td>{{ani.telefono}}</td>
+          <td><a href="{%url 'editarcliente' ani.id %}">Editar</a> <a href="{%url 'eliminarcliente' ani.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </form>
+{% endblock  %}

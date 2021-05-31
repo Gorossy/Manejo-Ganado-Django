@@ -1,0 +1,33 @@
+{% extends 'base2.html' %}
+{% block formulario %}
+</form>
+  <form class="vistatabla">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Embarazada</th>
+          <th>Pajilla Usada</th>
+          <th>Fecha de inseminacion</th>
+          <th>Veterinario</th>
+          <th>Litros de leche</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ani in formulario %}
+        <tr>
+          <td>{{ani.id_animal}}</td>
+          <td>{{ani.embarazada}}</td>
+          <td>{{ani.pajilla}}</td>
+          <td>{{ani.fecha_inseminacion}}</td>
+          <td>{{ani.id_veterinario}}</td>
+          <td>{{ani.litros}}</td>
+          <td><a href="{%url 'editarvacamadre' ani.id %}">Editar</a> <a href="{%url 'eliminarvacamadre' ani.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </form>
+{% endblock  %}

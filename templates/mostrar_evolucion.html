@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% block formulario %}
+</form>
+  <form class="vistatabla">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Mes</th>
+          <th>Descripcion</th>
+          <th>Fecha del parto</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ani in formulario %}
+        <tr>
+          <td>{{ani.id_animal}}</td>
+          <td>{{ani.mes}}</td>
+          <td>{{ani.descripcion}}</td>
+          <td>{{ani.fecha_parto}}</td>
+          <td><a href="{%url 'editarevolucion' ani.id %}">Editar</a> <a href="{%url 'eliminarevolucion' ani.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </form>
+{% endblock  %}

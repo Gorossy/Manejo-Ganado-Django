@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% block formulario %}
+</form>
+  <form class="vistatabla">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fecha</th>
+          <th>Kilos De Comida</th>
+          <th>Litros De Agua</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ani in formulario %}
+        <tr>
+          <td>{{ani.id_animal}}</td>
+          <td>{{ani.fecha}}</td>
+          <td>{{ani.kilos}}</td>
+          <td>{{ani.consumo_agua}}</td>
+          <td><a href="{%url 'editaralimentacion' ani.id %}">Editar</a> <a href="{%url 'eliminaralimentacion' ani.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </form>
+{% endblock  %}
