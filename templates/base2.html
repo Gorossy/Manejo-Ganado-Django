@@ -1,166 +1,182 @@
-
-<!-- === BEGIN HEADER === -->
-<!DOCTYPE html>
 {% load static %}
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-    <!--<![endif]-->
+{% if user.is_authenticated %}
+    <!-- === BEGIN HEADER === -->
+    <!DOCTYPE html>
 
-    <head>
-        <!-- Title -->
-        <title>Lifestyle - Professional Bootstrap Template</title>
-        <!-- Meta -->
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <!-- Favicon -->
-        <link href="favicon.ico" rel="shortcut icon">
-        <!-- Bootstrap Core CSS -->
-        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet">
-        <!-- Template CSS -->
-        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'assets/css/font-awesome.css'%}" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'assets/css/nexus.css'%}" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'assets/css/custom.css'%}" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
-        <!-- Google Fonts-->
-        <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=PT+Sans" type="text/css" rel="stylesheet">
-        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
-    </head>
+    <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+    <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+    <!--[if !IE]><!-->
+    <html lang="en">
+        <!--<![endif]-->
 
-    <body>
-        <div id="body-bg">
-            <div id="header">
-                <div class="container">
-                    <a href="{% url "index" %}" title="">
-                        <img src="{% static 'assets/img/logo.png'%}" alt="Logo" />
-                    </a>
-                </div>
-                        <!-- End Logo -->
+        <head>
+            <!-- Title -->
+            <title>Lifestyle - Professional Bootstrap Template</title>
+            <!-- Meta -->
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name="description" content="">
+            <meta name="author" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            <!-- Favicon -->
+            <link href="favicon.ico" rel="shortcut icon">
+            <!-- Bootstrap Core CSS -->
+            <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet">
+            <!-- Template CSS -->
+            <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'assets/css/font-awesome.css'%}" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'assets/css/nexus.css'%}" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'assets/css/custom.css'%}" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+            <!-- Google Fonts-->
+            <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+            <link href="http://fonts.googleapis.com/css?family=PT+Sans" type="text/css" rel="stylesheet">
+            <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+        </head>
 
-            </div>
-            <!-- Top Menu -->
-            <div id="hornav" class="container no-padding">
-                <div class="row">
-                    <div class="col-md-12 no-padding">
-                        <div class="text-center visible-lg">
-                            <ul id="hornavmenu" class="nav navbar-nav">
-                               <li class="parent">
-                                    <span>Registros</span>
-                                    <ul>
-                                        <li>
-                                            <a href="{% url "crearAnimal" %}">Agregar animales</a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url "crearventa" %}">Registrar Ventas</a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url "crearpajilla" %}">Registrar Pajillas</a>
-                                        </li>
-                                        <li class="parent">
-                                            <span>Vacas Madres</span>
-                                            <ul>
-                                                <li>
-                                                    <a href="{% url "crearpajilla" %}">Registrar Inseminaciones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{% url "crearvacamadre" %}">Registrar Embarazos</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{% url "crearternero" %}">Registrar Partos</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li>
-                                            <a href="">Registro Alimentacion</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="parent">
-                                    <span>Estado Actual</span>
-                                    <ul>
-                                        <li>
-                                            <a href="{% url "mostrarventa" %}">Ver ventas</a> <!-- mostrar las pajillas disponibles -->
-                                        </li>
-                                        <li>
-                                            <a href="{% url "mostraranimal" %}">Toros</a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url "mostraranimal" %}">Vacas</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="{% url "mostrarenfermedades" %}">Historial Enfermedades</a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url "mostrarvacuna" %}">Historial de vacunas</a>
-                                        </li>
-                                        <li>
-                                            <a href="{% url "mostrarbaja" %}">Historial de bajas</a>
-                                        </li>
-                                    </ul>
-                                    </li>
-                                <li>
-                                   <a href='{% url "registro" %}' class="fa-font">Registrar Administrador</a>
-                               </li>
-                                <li>
-                                    <a href='{% url "logout" %}' class="fa-font">Logout</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="content-top-border" class="container">
-            </div>
-            <div class="clearfix"></div>
-
-            <div id="content">
-                <div class="container background-white">
+        <body>
+            <div id="body-bg">
+                <div id="header">
                     <div class="container">
-                        <div class="row margin-vert-30">
-                            <div class="col-md-6 col-md-offset-3 col-sm-offset-3">
+                        <a href="{% url "index" %}" title="">
+                            <img src="{% static 'assets/img/logo.png'%}" alt="Logo" />
+                        </a>
+                    </div>
+                            <!-- End Logo -->
 
-                                    {%block formulario%}
+                </div>
+                <!-- Top Menu -->
+                <div id="hornav" class="container no-padding">
+                    <div class="row">
+                        <div class="col-md-12 no-padding">
+                            <div class="text-center visible-lg">
+                                <ul id="hornavmenu" class="nav navbar-nav">
+                                <li class="parent">
+                                        <span>Registros</span>
+                                        <ul>
+                                            <li>
+                                                <a href="{% url "crearAnimal" %}">Agregar Animales</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearveterinario" %}">Agregar Veterinario</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearcliente" %}">Agregar Cliente</a>
+                                            </li>
+                                            <li>
+                                            <a href="{% url "crearvacamadre" %}">Registrar Vaca Madre</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearventa" %}">Registrar Ventas</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearenfermedades" %}">Registrar Enfermedad</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearevolucion" %}">Registrar Evolucion</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearternero" %}">Registrar un ternero</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearbaja" %}">Registrar una baja</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearvacuna" %}">Registrar Vacuna</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearpajilla" %}">Registrar Pajillas</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "crearalimentacion" %}">Registrar Alimentacion</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Estado Actual</span>
+                                        <ul>
+                                            <li>
+                                                <a href="{% url "mostrarventa" %}">Ver ventas</a> <!-- mostrar las pajillas disponibles -->
+                                            </li>
+                                            <li>
+                                                <a href="{% url "mostraranimal" %}">Toros</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "mostraranimal" %}">Vacas</a>
+                                            </li>
 
-                                    {% endblock %}
-
+                                            <li>
+                                                <a href="{% url "mostrarenfermedades" %}">Historial Enfermedades</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "mostrarvacuna" %}">Historial de vacunas</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url "mostrarbaja" %}">Historial de bajas</a>
+                                            </li>
+                                        </ul>
+                                        </li>
+                                    <li>
+                                    <a href='{% url "registro" %}'>Registrar Administrador</a>
+                                </li>
+                                    <li>
+                                        <a href='{% url "logout" %}' >Cerrar sesion</a>
+                                    </li>
+                                    <li>
+                                        <a>{{user.username}}</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="content-bottom-border" class="container">
-            </div>
 
-            <div class="col-md-1">
-            </div>
+                <div id="content-top-border" class="container">
+                </div>
+                <div class="clearfix"></div>
+
+                <div id="content">
+                    <div class="container background-white">
+                        <div class="container">
+                            <div class="row margin-vert-30">
+                                <div class="col-md-6 col-md-offset-3 col-sm-offset-3">
+
+                                        {%block formulario%}
+
+                                        {% endblock %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content-bottom-border" class="container">
+                </div>
+
+                <div class="col-md-1">
+                </div>
 
 
 
 
-            <script type="text/javascript" src="{% static 'assets/js/jquery.min.js'%}" type="text/javascript"></script>
-            <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}" type="text/javascript"></script>
-            <script type="text/javascript" src="{% static 'assets/js/scripts.js'%}"></script>
-            <!-- Isotope - Portfolio Sorting -->
-            <script type="text/javascript" src="{% static 'assets/js/jquery.isotope.js'%}" type="text/javascript"></script>
-            <!-- Mobile Menu - Slicknav -->
-            <script type="text/javascript" src="{% static 'assets/js/jquery.slicknav.js'%}" type="text/javascript"></script>
-            <!-- Animate on Scroll-->
-            <script type="text/javascript" src="{% static 'assets/js/jquery.visible.js'%}" charset="utf-8"></script>
-            <!-- Sticky Div -->
-            <script type="text/javascript" src="{% static 'assets/js/jquery.sticky.js'%}" charset="utf-8"></script>
-            <!-- Slimbox2-->
-            <script type="text/javascript" src="{% static 'assets/js/slimbox2.js'%}" charset="utf-8"></script>
-            <!-- Modernizr -->
-            <script src="{% static 'assets/js/modernizr.custom.js'%}" type="text/javascript"></script>
-            <!-- End JS -->
-    </body>
-</html>
+                <script type="text/javascript" src="{% static 'assets/js/jquery.min.js'%}" type="text/javascript"></script>
+                <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}" type="text/javascript"></script>
+                <script type="text/javascript" src="{% static 'assets/js/scripts.js'%}"></script>
+                <!-- Isotope - Portfolio Sorting -->
+                <script type="text/javascript" src="{% static 'assets/js/jquery.isotope.js'%}" type="text/javascript"></script>
+                <!-- Mobile Menu - Slicknav -->
+                <script type="text/javascript" src="{% static 'assets/js/jquery.slicknav.js'%}" type="text/javascript"></script>
+                <!-- Animate on Scroll-->
+                <script type="text/javascript" src="{% static 'assets/js/jquery.visible.js'%}" charset="utf-8"></script>
+                <!-- Sticky Div -->
+                <script type="text/javascript" src="{% static 'assets/js/jquery.sticky.js'%}" charset="utf-8"></script>
+                <!-- Slimbox2-->
+                <script type="text/javascript" src="{% static 'assets/js/slimbox2.js'%}" charset="utf-8"></script>
+                <!-- Modernizr -->
+                <script src="{% static 'assets/js/modernizr.custom.js'%}" type="text/javascript"></script>
+                <!-- End JS -->
+        </body>
+    </html>
+    {% else %}
+    <h1>No tienes acceso a esta pagina puedes logearte <a href='{% url "login" %}' >Aqui</a></a><h1> 
+{% endif %}

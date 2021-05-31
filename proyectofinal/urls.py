@@ -26,7 +26,6 @@ urlpatterns = [
     path('productos/', LoginView.as_view(template_name='portfolio-2-column.html'), name='productos'),
     path('contact/', LoginView.as_view(template_name='contact.html'), name='contact'),
     path('nosotros/', LoginView.as_view(template_name='pages-about-us.html'), name='nosotros'),
-    path('menu/', LoginView.as_view(template_name='menu.html'), name='login'),
     
     path('crear_animal/', crearAnimal,name='crearAnimal'),
     path('animales/', mostraranimal, name='mostraranimal'),

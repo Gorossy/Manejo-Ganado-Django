@@ -40,6 +40,7 @@ class Pajilla(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     fecha = models.DateTimeField()
 class VacaMadre(models.Model):
+    id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     Embarazada = models.IntegerField()
     pajilla = models.ForeignKey(Pajilla, on_delete=CASCADE)
     fecha_inseminacion = models.DateTimeField()
