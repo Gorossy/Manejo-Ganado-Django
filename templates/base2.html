@@ -99,10 +99,10 @@
                                                 <a href="{% url "mostrarventa" %}">Ver ventas</a> <!-- mostrar las pajillas disponibles -->
                                             </li>
                                             <li>
-                                                <a href="{% url "mostraranimal" %}">Toros</a>
+                                                <a href="{% url "mostrartoro" %}">Toros</a>
                                             </li>
                                             <li>
-                                                <a href="{% url "mostraranimal" %}">Vacas</a>
+                                                <a href="{% url "mostrarvaca" %}">Vacas</a>
                                             </li>
 
                                             <li>
@@ -120,10 +120,12 @@
                                     <a href='{% url "registro" %}'>Registrar Administrador</a>
                                 </li>
                                     <li>
-                                        <a href='{% url "logout" %}' >Cerrar sesion</a>
-                                    </li>
-                                    <li>
-                                        <a>{{user.username}}</a>
+                                        <span>{{user.username}}</span>
+                                        <ul>
+                                        <li>
+                                            <a href='{% url "logout" %}?next=/' >Cerrar sesion</a>
+                                        </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>

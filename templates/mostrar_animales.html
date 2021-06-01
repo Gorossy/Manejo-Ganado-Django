@@ -11,6 +11,7 @@
           <th>TIPO</th>
           <th>PESO</th>
           <th>OPCIONES</th>
+          <th>MÁS DETALLES</th>
 
         </tr>
       </thead>
@@ -18,10 +19,11 @@
         {% for ani in formulario %}
         <tr>
             <td>{{ani.id}}</td>
-            <td>{% if ani.tipo == 0%} Vaca {% endif %} {% if ani.tipo == 1%} Toro {% endif %} {% if ani.tipo == 2%} Cebo {% endif %} {% if ani.tipo == 3%} Ternero {% endif %} </td>
+            <td>{% if ani.tipo == 0%} Ternero {% endif %} {% if ani.tipo == 1%} Toro {% endif %} {% if ani.tipo == 2%} Vaca {% endif %} {% if ani.tipo == 3%} Cebo {% endif %} </td>
             <td>{{ani.peso}}</td>
             <td><a href="{%url 'editarAnimal' ani.id %}">Editar</a> <a href="{%url 'eliminarAnimal' ani.id %}">
               Eliminar</a></td>
+            <td><a href="{%url 'detallestoro' ani.id %}">Detalles</a></td>
         </tr>
         {% endfor %}
       </tbody>

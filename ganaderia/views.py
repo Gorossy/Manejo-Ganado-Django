@@ -3,17 +3,24 @@ from django.shortcuts import redirect, render
 from .forms import UserRegisterForm
 from .forms import *
 from .models import *
+from django.template import RequestContext
 
 # Create your views here.
 def inicio(request):
     if request.user.is_authenticated:
         return render(request, 'menu.html')
     else:
-        return render(request, 'index.html')
-
-
-
-
+        conteo = Cliente.objects.count()
+        conteo2 = Animal.objects.count()
+        conteo3 = Veterinario.objects.count()
+        context = {'conteo': conteo,'conteo2':conteo2,'conteo3':conteo3}
+        return render(request, 'index.html',context)
+def productos(request):
+     return render(request, 'portfolio-2-column.html')
+def contacto(request):
+    return render(request, 'contact.html')
+def nosotros(request):
+    return render(request, 'pages-about-us.html')
 def registrarse(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -27,8 +34,6 @@ def registrarse(request):
         form = UserRegisterForm()
     context = {'form': form}
     return render(request,'pages-sign-up.html', context)
-
-
 def crearAnimal(request):
     if request.method =='GET':
         form = AnimalForm()
@@ -46,12 +51,28 @@ def crearAnimal(request):
     return render(request,'animales.html', contexto)
 
 
-def mostraranimal(request):
-    animal = Animal.objects.all()
+def mostraranimal1(request):
+    animal = Animal.objects.filter(tipo = 1)
     contexto = {
         'formulario':animal,
         }
     return render(request,'mostrar_animales.html',contexto)
+def mostraranimal2(request):
+    animal = Animal.objects.filter(tipo = 2)
+    contexto = {
+        'formulario':animal,
+        }
+    return render(request,'mostrar_animales.html',contexto)
+def detallestoro(request, id):
+    enfermedad = Enfermedadades.objects.filter(id_animal = id)
+    vacuna = Vacuna.objects.filter(id_animal = id)
+    alimentacion = Alimentacion.objects.filter(id_animal = id)
+    veterinario = Veterinario.objects.filter(id = id)
+    baja = Baja.objects.filter(id = id)
+    contexto = {
+        'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'veterinario':veterinario,'baja':baja
+        }
+    return render(request,'detalles.html',contexto)
 def mostrarveterinario(request):
     animal = Veterinario.objects.all()
     contexto = {

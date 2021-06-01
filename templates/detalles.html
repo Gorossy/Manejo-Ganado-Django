@@ -1,0 +1,92 @@
+{% extends 'base2.html' %}
+{% block formulario %}
+<details>
+  <summary>Alimentacion</summary>
+    <form class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Alimento(Kg)</th>
+          <th>Consumo de agua(L)</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ali in alimentacion %}
+        <tr>
+          <td>{{ali.fecha}}</td>
+          <td>{{ali.kilos}}</td>
+          <td>{{ali.consumo_agua}}</td>
+          <td><a href="{%url 'editaralimentacion' ali.id_animal.id %}">Editar</a> <a href="{%url 'eliminaralimentacion' ali.id_animal.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </form>
+</details>
+<details>
+  <summary>Enfermedades</summary>
+  <form class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Fecha Inicio</th>
+          <th>Fecha Final</th>
+          <th>Veterinario</th>
+          <th>Opciones</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {% for ali in enfermedad %}
+        <tr>
+          <td>{{ali.nombre}}</td>
+          <td>{{ali.inicio}}</td>
+          <td>{{ali.final}}</td>
+          <td>{{ali.id_veterinario}}</td>
+          <td><a href="{%url 'editarenfermedades' ali.id_animal.id %}">Editar</a> <a href="{%url 'eliminarenfermedades' ali.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </form>
+</details>
+<details>
+  <summary>Vacuna</summary>
+  <form class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Veterinario</th>
+          <th>Fecha</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ali in vacuna %}
+        <tr>
+          <td>{{ali.id}}</td>
+          <td>{{ali.nombre}}</td>
+          <td>{{ali.id_veterinario}}</td>
+          <td>{{ali.fecha}}</td>
+          <td><a href="{%url 'editarvacuna' ali.id_animal.id %}">Editar</a> <a href="{%url 'eliminarvacuna' ali.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </form>
+</details>
+<details>
+  <summary>Baja</summary>
+        {% for ali in baja %}
+            {% if ali.motivo == 0%} Fue vendido {% elif ali.motivo == 1 %}Muerte por Sacrificio{% elif ali.motivo == 2 %} Muerte por enfermedad {% endif %}
+        {% endfor %}
+</details>
+{% endblock formulario %}

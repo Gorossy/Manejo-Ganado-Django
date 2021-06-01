@@ -17,18 +17,24 @@ from django.contrib import admin
 from django.urls import path
 from ganaderia.views import *
 from django.contrib.auth.views import LoginView,LogoutView
+from django.conf.urls import handler404
+
 urlpatterns = [
     path('', inicio, name='index'),
     path('admin/', admin.site.urls),
     path('registrarse/', registrarse, name='registro'),
     path('login/', LoginView.as_view(template_name='pages-login.html'), name='login'),
-    path('logout/', LogoutView.as_view(template_name='index.html'), name='logout'),
-    path('productos/', LoginView.as_view(template_name='portfolio-2-column.html'), name='productos'),
-    path('contact/', LoginView.as_view(template_name='contact.html'), name='contact'),
-    path('nosotros/', LoginView.as_view(template_name='pages-about-us.html'), name='nosotros'),
+    path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
+    path('productos/', productos, name='productos'),
+    path('contacto/', contacto, name='contact'),
+    path('nosotros/', nosotros, name='nosotros'),
+    path('detallestoro/<int:id>/', detallestoro, name='detallestoro'),
+
+    
     
     path('crear_animal/', crearAnimal,name='crearAnimal'),
-    path('animales/', mostraranimal, name='mostraranimal'),
+    path('toros/', mostraranimal1, name='mostrartoro'),
+    path('vacas/', mostraranimal2, name='mostrarvaca'),
     path('editaranimal/<int:id>/',editarAnimal,name='editarAnimal'),
     path('eliminaranimal/<int:id>/',eliminarAnimal,name='eliminarAnimal'),
 

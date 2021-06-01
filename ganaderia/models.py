@@ -8,10 +8,14 @@ class Veterinario(models.Model):
     nombre = models.CharField(max_length=20)
     telefono = models.CharField(max_length=20)
     tipo = models.CharField(max_length=10)
+    def __str__(self):
+        return self.nombre
 class Animal(models.Model):
     id = models.IntegerField(primary_key=True, unique=True)
     tipo = models.IntegerField()
     peso = models.IntegerField()
+    def __str__(self):
+        return str(self.id) 
 class Enfermedadades(models.Model):
     id = models.IntegerField(primary_key=True, unique=True)
     id_animal = models.ForeignKey(Animal,on_delete=CASCADE)
@@ -19,23 +23,31 @@ class Enfermedadades(models.Model):
     nombre = models.CharField(max_length=20)
     inicio = models.DateTimeField(auto_now_add=True)
     final = models.DateTimeField(null=True, blank=True)
+    def __str__(self):
+        return self.nombre
 class Vacuna(models.Model):
     id = models.IntegerField(primary_key=True, unique=True)
     nombre = models.CharField(max_length=20)
     id_animal = models.ForeignKey(Animal,on_delete=CASCADE)
     id_veterinario = models.ForeignKey(Veterinario,on_delete=CASCADE)
     fecha = models.DateTimeField()
+    def __str__(self):
+        return self.nombre
 class Cliente(models.Model):
     id = models.IntegerField(primary_key=True)
     nombre = models.CharField(max_length=20)
     telefono = models.CharField(max_length=20)
+    def __str__(self):
+        return self.nombre
 class Venta(models.Model):
     id = models.IntegerField(primary_key=True, unique=True)
     fecha = models.DateTimeField()
     tipo = models.IntegerField()
-    id_venta = models.ForeignKey(Animal,on_delete=CASCADE)
+    id_producto = models.ForeignKey(Animal,on_delete=CASCADE)
     id_cliente = models.ForeignKey(Cliente,on_delete=CASCADE)
     precio = models.IntegerField()
+    def __str__(self):
+        return str(self.id)
 class Pajilla(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     fecha = models.DateTimeField()
