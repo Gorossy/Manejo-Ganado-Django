@@ -10,7 +10,7 @@ def inicio(request):
     if request.user.is_authenticated:
         return render(request, 'menu.html')
     else:
-        conteo = Cliente.objects.count()
+        conteo = Venta.objects.count()
         conteo2 = Animal.objects.count()
         conteo3 = Veterinario.objects.count()
         context = {'conteo': conteo,'conteo2':conteo2,'conteo3':conteo3}
