@@ -1,30 +1,36 @@
 {% extends "base2.html" %}
 
-{% block content %}
-    <div>
-        <div class="headline">
-            <h2>Pager Examples</h2>
+{% block formulario %}
+
+    <div class="container background-gray-lighter">
+        <div class="row margin-vert-40">
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-clock-o fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo2}}</h2>
+                    <p>ANIMALES TOTALES</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-tachometer fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo3}}</h2>
+                    <p>CANTIDAD DE VETERINARIOS</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-4">
+                    <i class="fa-users fa-5x color-primary"></i>
+                </div>
+                <div class="col-md-8">
+                    <h2 class="margin-top-5 margin-bottom-0">{{conteo}}</h2>
+                    <p>CLIENTES SATISFECHOS</p>
+                </div>
+            </div>
         </div>
-        <p>Hola como estas</p>
-        <ul class="pager">
-            <li class="previous">
-                <a href="#">&larr; Older</a>
-            </li>
-            <li class="next">
-                <a href="#">Newer &rarr;</a>
-            </li>
-        </ul>
-        <hr>
-        <p>Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpaid est blanditiis ducimus qui blanditiis.</p>
-        <ul class="pager">
-            <ul class="pager">
-                <li>
-                    <a href="#">Previous</a>
-                </li>
-                <li>
-                    <a href="#">Next</a>
-                </li>
-            </ul>
-        </ul>
     </div>
 {% endblock %}

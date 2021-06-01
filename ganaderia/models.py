@@ -60,6 +60,8 @@ class VacaMadre(models.Model):
     fecha_inseminacion = models.DateField()
     id_veterinario = models.ForeignKey(Veterinario,on_delete=CASCADE)
     litros = models.IntegerField(null=True, blank=True)
+    def __str__(self):
+        return str(self.id_animal)
 class Evolucion(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     mes = models.DateField()
@@ -68,7 +70,7 @@ class Evolucion(models.Model):
 class Ternero(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     sexo = models.IntegerField()
-    madre = models.ForeignKey(Animal, on_delete=CASCADE,related_name='Madre')
+    madre = models.ForeignKey(VacaMadre, on_delete=CASCADE,related_name='Madre')
     destete = models.DateField(null=True, blank=True)
     remplazo = models.IntegerField()
 class Baja(models.Model):

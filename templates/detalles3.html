@@ -2,9 +2,9 @@
 {% block formulario %}
 <details>
   <summary>Alimentacion</summary>
-    <form class="table">
-    <table>
-      <thead>
+    <form >
+    <table class="table">
+      <thead class='table-header'>
         <tr>
           <th>Fecha</th>
           <th>Alimento(Kg)</th>
@@ -28,9 +28,9 @@
 </details>
 <details>
   <summary>Enfermedades</summary>
-  <form class="table">
-    <table>
-      <thead>
+  <form>
+    <table class="table">
+      <thead class='table-header'>
         <tr>
           <th>Nombre</th>
           <th>Fecha Inicio</th>
@@ -57,9 +57,9 @@
 </details>
 <details>
   <summary>Vacuna</summary>
-  <form class="table">
-    <table>
-      <thead>
+  <form>
+    <table class="table">
+      <thead class='table-header'>
         <tr>
           <th>ID</th>
           <th>Nombre</th>
@@ -94,12 +94,13 @@
 {% if ternero %}
 <details>
     <summary>Ternero</summary>
-    <form class="table">
-    <table>
-      <thead>
+    <form>
+    <table class="table">
+      <thead class='table-header'>
         <tr>
           <th>Sexo</th>
           <th>Madre</th>
+          <th>Padre</th>
           <th>Fecha de destete</th>
           <th>Remplazo</th>
           <th>Opciones</th>
@@ -110,9 +111,12 @@
         {% for ali in ternero %}
         <tr>
           <td>{% if ali.sexo == 0 %}Hembra{% elif ali.sexo == 1 %}Macho{% endif %}</td>
-          <td>{{ali.madre}}</td>
+          <td>{{ali.madre.id_animal}}</td>
+          <td>
+          {{ali.madre.pajilla.id_animal}}
+          </td>
           <td>{{ali.destete}}</td>
-          <td>{{ali.remplazo}}</td>
+          <td>{% if ali.remplazo == 2 %}No{% elif ali.remplazo == 1 %}Si{% endif %}</td>
           <td><a href="{%url 'editarternero' ali.id %}">Editar</a> <a href="{%url 'eliminarternero' ali.id %}">
               Eliminar</a></td>
         </tr>

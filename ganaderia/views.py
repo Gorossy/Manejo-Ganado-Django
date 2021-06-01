@@ -7,14 +7,14 @@ from django.template import RequestContext
 
 # Create your views here.
 def inicio(request):
+    conteo = Venta.objects.count()
+    conteo2 = Animal.objects.count()
+    conteo3 = Veterinario.objects.count()
+    context = {'conteo': conteo, 'conteo2': conteo2, 'conteo3': conteo3}
     if request.user.is_authenticated:
-        return render(request, 'menu.html')
+        return render(request, 'menu.html', context)
     else:
-        conteo = Venta.objects.count()
-        conteo2 = Animal.objects.count()
-        conteo3 = Veterinario.objects.count()
-        context = {'conteo': conteo,'conteo2':conteo2,'conteo3':conteo3}
-        return render(request, 'index.html',context)
+       return render(request, 'index.html', context)
 def productos(request):
      return render(request, 'portfolio-2-column.html')
 def contacto(request):
@@ -96,8 +96,9 @@ def detallesternero(request, id):
     alimentacion = Alimentacion.objects.filter(id_animal = id)
     baja = Baja.objects.filter(id = id)
     ternero = Ternero.objects.filter(id_animal = id)
+    vacaMadre = VacaMadre.objects.all()
     contexto = {
-        'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'baja':baja,'ternero':ternero,
+        'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'baja':baja,'ternero':ternero,'vacaMadre':vacaMadre
         }
     return render(request,'detalles3.html',contexto)
 def mostrarveterinario(request):
@@ -125,9 +126,10 @@ def mostrarcliente(request):
         }
     return render(request,'mostrar_cliente.html',contexto)
 def mostrarventa(request):
-    animal = Venta.objects.all()
+    venta = Venta.objects.all()
+    animalito = Animal.objects.all()
     contexto = {
-        'formulario':animal,
+        'formulario':venta, 'animalito':animalito,
         }
     return render(request,'mostrar_venta.html',contexto)
 def mostrarpajilla(request):

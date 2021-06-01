@@ -1,35 +1,15 @@
-
-table {
-  border: 1px solid #000;
-  background-color: #272875;
-  border-collapse: collapse;
-  margin:150px auto;
-  cursor: pointer;
-  margin-right: 80px;
-  text-align:center;
-  margin: 0 auto;
-
-}
-
-th, td {
-   font-family: 'Roboto', sans-serif;
-   width: 25%;
-   text-align: left;
-   padding: 5px;
+.table {
+  text-align: center;
+  flex: 1 1 20%;
+  
 }
 thead {
-  background-color: #455A64;
-  border-bottom: solid 5px #021E70;
-
-}
-tr:nth-child(even){
-  background-color: #3B2775;
+	background:#000;
+	padding:(1.5) 0;
+  
 }
 
-tr:hover td{
-  background-color: #9FF3E7;
-  color: white;
-}
+
 ul.horizontal{
   margin:0;
   padding:0;
@@ -105,3 +85,4 @@ header a {
   text-decoration: none;
   color: #333;
 }
+
