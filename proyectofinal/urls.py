@@ -28,13 +28,17 @@ urlpatterns = [
     path('productos/', productos, name='productos'),
     path('contacto/', contacto, name='contact'),
     path('nosotros/', nosotros, name='nosotros'),
-    path('detallestoro/<int:id>/', detallestoro, name='detallestoro'),
+    path('toro/<int:id>/', detallestoro, name='detallestoro'),
+    path('vaca/<int:id>/', detallesvaca, name='detallesvaca'),
+    path('ternero/<int:id>/', detallesternero, name='detallesternero'),
+
 
     
     
     path('crear_animal/', crearAnimal,name='crearAnimal'),
     path('toros/', mostraranimal1, name='mostrartoro'),
     path('vacas/', mostraranimal2, name='mostrarvaca'),
+    path('ternero/', mostraranimal3, name='mostrarvaca'),
     path('editaranimal/<int:id>/',editarAnimal,name='editarAnimal'),
     path('eliminaranimal/<int:id>/',eliminarAnimal,name='eliminarAnimal'),
 

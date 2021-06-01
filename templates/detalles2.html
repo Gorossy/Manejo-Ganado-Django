@@ -88,7 +88,69 @@
         {% for ali in baja %}
             {% if ali.motivo == 0%} Fue vendido en la fecha: {{ali.fecha}}{% elif ali.motivo == 1 %}Muerte por Sacrificio en la fecha: {{ali.fecha}}{% elif ali.motivo == 2 %} Muerte por enfermedad en la fecha: {{ali.fecha}}{% endif %}
         {% empty %}
-        El individuo esta vivo
+            El individuo esta vivo
         {% endfor %}
+</details>
+<details>
+<summary>Registro de vaca madre</summary>
+{% if madre %}
+    <form class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Embarazada</th>
+          <th>Pajilla</th>
+          <th>Fecha de inseminacion</th>
+          <th>Veterinario</th>
+          <th>Leche producida</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ali in madre %}
+        <tr>
+          <td>{% if ali.Embarazada == 0 %}No {% elif ali.Embarazada == 1 %}Si{% endif %}</td>
+          <td>{{ali.pajilla}}</td>
+          <td>{{ali.fecha_inseminacion}}</td>
+          <td>{{ali.id_veterinario}}</td>
+          <td>{{ali.litros}}</td>
+          <td><a href="{%url 'editarvacamadre' ali.id %}">Editar</a> <a href="{%url 'eliminarvacamadre' ali.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </form>
+{% else %}
+    Esta Vaca aun no se ha inseminado
+{% endif %}
+</details>
+<details>
+<summary>Evolución</summary>
+{% if evolucion %}
+    <form class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Mes</th>
+          <th>Descripción</th>
+          <th>Fecha de Parto</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ali in evolucion %}
+        <tr>
+          <td>{{ali.mes}}</td>
+          <td>{{ali.descripcion}}</td>
+          <td>{{ali.fecha_parto}}</td>
+          <td><a href="{%url 'editarevolucion' ali.id %}">Editar</a> <a href="{%url 'eliminarevolucion' ali.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </form>
+{% endif %}
 </details>
 {% endblock formulario %}

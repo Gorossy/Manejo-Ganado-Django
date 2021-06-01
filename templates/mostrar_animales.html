@@ -23,7 +23,7 @@
             <td>{{ani.peso}}</td>
             <td><a href="{%url 'editarAnimal' ani.id %}">Editar</a> <a href="{%url 'eliminarAnimal' ani.id %}">
               Eliminar</a></td>
-            <td><a href="{%url 'detallestoro' ani.id %}">Detalles</a></td>
+            <td><a href="{% if ani.tipo == 0%} {%url 'detallesternero' ani.id %}{% endif %} {% if ani.tipo == 1%} {%url 'detallestoro' ani.id %}{% endif %} {% if ani.tipo == 2%} {%url 'detallesvaca' ani.id %}{% endif %} ">Detalles</a></td>
         </tr>
         {% endfor %}
       </tbody>

@@ -21,8 +21,8 @@ class Enfermedadades(models.Model):
     id_animal = models.ForeignKey(Animal,on_delete=CASCADE)
     id_veterinario = models.ForeignKey(Veterinario,on_delete=CASCADE)
     nombre = models.CharField(max_length=20)
-    inicio = models.DateTimeField(auto_now_add=True)
-    final = models.DateTimeField(null=True, blank=True)
+    inicio = models.DateField()
+    final = models.DateField(null=True, blank=True)
     def __str__(self):
         return self.nombre
 class Vacuna(models.Model):
@@ -30,7 +30,7 @@ class Vacuna(models.Model):
     nombre = models.CharField(max_length=20)
     id_animal = models.ForeignKey(Animal,on_delete=CASCADE)
     id_veterinario = models.ForeignKey(Veterinario,on_delete=CASCADE)
-    fecha = models.DateTimeField()
+    fecha = models.DateField()
     def __str__(self):
         return self.nombre
 class Cliente(models.Model):
@@ -41,7 +41,7 @@ class Cliente(models.Model):
         return self.nombre
 class Venta(models.Model):
     id = models.IntegerField(primary_key=True, unique=True)
-    fecha = models.DateTimeField()
+    fecha = models.DateField()
     tipo = models.IntegerField()
     id_producto = models.ForeignKey(Animal,on_delete=CASCADE)
     id_cliente = models.ForeignKey(Cliente,on_delete=CASCADE)
@@ -50,31 +50,33 @@ class Venta(models.Model):
         return str(self.id)
 class Pajilla(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
-    fecha = models.DateTimeField()
+    fecha = models.DateField()
+    def __str__(self):
+        return str(self.id_animal)
 class VacaMadre(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     Embarazada = models.IntegerField()
     pajilla = models.ForeignKey(Pajilla, on_delete=CASCADE)
-    fecha_inseminacion = models.DateTimeField()
+    fecha_inseminacion = models.DateField()
     id_veterinario = models.ForeignKey(Veterinario,on_delete=CASCADE)
     litros = models.IntegerField(null=True, blank=True)
 class Evolucion(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
-    mes = models.DateTimeField()
+    mes = models.DateField()
     descripcion = models.TextField()
-    fecha_parto = models.DateTimeField()
+    fecha_parto = models.DateTimeField(null=True, blank=True)
 class Ternero(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     sexo = models.IntegerField()
     madre = models.ForeignKey(Animal, on_delete=CASCADE,related_name='Madre')
-    destete = models.DateTimeField()
+    destete = models.DateField(null=True, blank=True)
     remplazo = models.IntegerField()
 class Baja(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
     motivo = models.IntegerField()
-    fecha = models.DateTimeField()
+    fecha = models.DateField()
 class Alimentacion(models.Model):
     id_animal = models.ForeignKey(Animal, on_delete=CASCADE)
-    fecha = models.DateTimeField()
+    fecha = models.DateField()
     kilos = models.IntegerField()
     consumo_agua = models.IntegerField()

@@ -91,4 +91,37 @@
         El individuo esta vivo
         {% endfor %}
 </details>
+{% if ternero %}
+<details>
+    <summary>Ternero</summary>
+    <form class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Sexo</th>
+          <th>Madre</th>
+          <th>Fecha de destete</th>
+          <th>Remplazo</th>
+          <th>Opciones</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {% for ali in ternero %}
+        <tr>
+          <td>{% if ali.sexo == 0 %}Hembra{% elif ali.sexo == 1 %}Macho{% endif %}</td>
+          <td>{{ali.madre}}</td>
+          <td>{{ali.destete}}</td>
+          <td>{{ali.remplazo}}</td>
+          <td><a href="{%url 'editarternero' ali.id %}">Editar</a> <a href="{%url 'eliminarternero' ali.id %}">
+              Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </form>
+</details>
+
+
+{% endif %}
 {% endblock formulario %}

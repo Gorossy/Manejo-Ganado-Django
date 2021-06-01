@@ -63,16 +63,43 @@ def mostraranimal2(request):
         'formulario':animal,
         }
     return render(request,'mostrar_animales.html',contexto)
+def mostraranimal3(request):
+    animal = Animal.objects.filter(tipo = 0)
+    contexto = {
+        'formulario':animal,
+        }
+    return render(request,'mostrar_animales.html',contexto)
 def detallestoro(request, id):
     enfermedad = Enfermedadades.objects.filter(id_animal = id)
     vacuna = Vacuna.objects.filter(id_animal = id)
     alimentacion = Alimentacion.objects.filter(id_animal = id)
-    veterinario = Veterinario.objects.filter(id = id)
     baja = Baja.objects.filter(id = id)
     contexto = {
-        'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'veterinario':veterinario,'baja':baja
+        'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'baja':baja
         }
     return render(request,'detalles.html',contexto)
+def detallesvaca(request, id):
+    enfermedad = Enfermedadades.objects.filter(id_animal = id)
+    vacuna = Vacuna.objects.filter(id_animal = id)
+    alimentacion = Alimentacion.objects.filter(id_animal = id)
+
+    baja = Baja.objects.filter(id = id)
+    madre = VacaMadre.objects.filter(id_animal = id)
+    evolucion = Evolucion.objects.filter(id_animal =id)
+    contexto = {
+        'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'baja':baja, 'madre':madre,'evolucion':evolucion,
+        }
+    return render(request,'detalles2.html',contexto)
+def detallesternero(request, id):
+    enfermedad = Enfermedadades.objects.filter(id_animal = id)
+    vacuna = Vacuna.objects.filter(id_animal = id)
+    alimentacion = Alimentacion.objects.filter(id_animal = id)
+    baja = Baja.objects.filter(id = id)
+    ternero = Ternero.objects.filter(id_animal = id)
+    contexto = {
+        'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'baja':baja,'ternero':ternero,
+        }
+    return render(request,'detalles3.html',contexto)
 def mostrarveterinario(request):
     animal = Veterinario.objects.all()
     contexto = {
@@ -313,7 +340,7 @@ def editarAnimal(request,id):
         form = AnimalForm(request.POST, instance=animal)
         if form.is_valid():
             form.save()
-            return redirect('mostraranimal')
+            return redirect('index')
     contexto = {'form':form}
     return render(request,'animales.html',contexto)
 
@@ -435,7 +462,7 @@ def eliminarVeterinario(request, id):
 def eliminarAnimal(request, id):
     variable = Animal.objects.get(id = id)
     variable.delete()
-    return redirect("mostraranimal")
+    return redirect("index")
 def eliminarEnfermedadades(request, id):
     variable = Enfermedadades.objects.get(id = id)
     variable.delete()
