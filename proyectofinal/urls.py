@@ -38,7 +38,7 @@ urlpatterns = [
     path('crear_animal/', crearAnimal,name='crearAnimal'),
     path('toros/', mostraranimal1, name='mostrartoro'),
     path('vacas/', mostraranimal2, name='mostrarvaca'),
-    path('ternero/', mostraranimal3, name='mostrarvaca'),
+    path('ternero/', mostraranimal3, name='mostrarternero'),
     path('editaranimal/<int:id>/',editarAnimal,name='editarAnimal'),
     path('eliminaranimal/<int:id>/',eliminarAnimal,name='eliminarAnimal'),
 
