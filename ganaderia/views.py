@@ -361,7 +361,7 @@ def editarVacaMadre(request,id):
     vacaMadre = VacaMadre.objects.get(id = id)
     form = VacaMadreForm(instance=vacaMadre)
     if request.method =='POST':
-        form = VacaMadreForm(request.POST, instance=VacaMadre)
+        form = VacaMadreForm(request.POST, instance=vacaMadre)
         if form.is_valid():
             form.save()
             return redirect('mostrarvacamadre')
@@ -371,7 +371,7 @@ def editarEvolucion(request,id):
     evolucion = Evolucion.objects.get(id = id)
     form = EvolucionForm(instance=evolucion)
     if request.method =='POST':
-        form = EvolucionForm(request.POST, instance=Evolucion)
+        form = EvolucionForm(request.POST, instance=evolucion)
         if form.is_valid():
             form.save()
             return redirect('mostrarevolucion')
@@ -381,7 +381,7 @@ def editarTernero(request,id):
     ternero = Ternero.objects.get(id = id)
     form = TerneroForm(instance=ternero)
     if request.method =='POST':
-        form = TerneroForm(request.POST, instance=Ternero)
+        form = TerneroForm(request.POST, instance=ternero)
         if form.is_valid():
             form.save()
             return redirect('mostrarternero')
@@ -391,7 +391,7 @@ def editarBaja(request,id):
     baja = Baja.objects.get(id = id)
     form = BajaForm(instance=baja)
     if request.method =='POST':
-        form = BajaForm(request.POST, instance=Baja)
+        form = BajaForm(request.POST, instance=baja)
         if form.is_valid():
             form.save()
             return redirect('mostrarbaja')
@@ -401,7 +401,7 @@ def editarAlimentacion(request,id):
     alimentacion = Alimentacion.objects.get(id = id)
     form = AlimentacionForm(instance=alimentacion)
     if request.method =='POST':
-        form = AlimentacionForm(request.POST, instance=Alimentacion)
+        form = AlimentacionForm(request.POST, instance=alimentacion)
         if form.is_valid():
             form.save()
             return redirect('mostraralimentacion')
