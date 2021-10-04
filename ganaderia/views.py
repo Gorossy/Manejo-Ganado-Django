@@ -73,7 +73,7 @@ def detallestoro(request, id):
     enfermedad = Enfermedadades.objects.filter(id_animal = id)
     vacuna = Vacuna.objects.filter(id_animal = id)
     alimentacion = Alimentacion.objects.filter(id_animal = id)
-    baja = Baja.objects.filter(id = id)
+    baja = Baja.objects.filter(id_animal = id)
     contexto = {
         'enfermedad':enfermedad,'vacuna':vacuna,'alimentacion':alimentacion,'baja':baja
         }
